@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulls and Cows Solver - More Info</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .scroll-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .scroll-content {
+            position: absolute;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            text-align: center;
+        }
+        .scroll-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .scroll-image {
+            width: auto;
+            max-width: 80%;
+            max-height: 80vh;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+        .back-button {
+            background: #238636;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 20px;
+        }
+        .back-button:hover {
+            background: #2ea043;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bulls and Cows Solver</h1>
+        <p>An interactive solver for the classic game Bulls and Cows, helping users find optimal guesses.</p>
+    </div>
+
+    <div class="scroll-section">
+        <div class="scroll-content">
+            <img src="photo1.jpg" alt="Bulls and Cows Solver Screenshot 1" class="scroll-image">
+            <p>Designed a web-based solver that assists players in cracking the Bulls and Cows code efficiently. But unlike the traditional bulls and cows this solver is capabale of solving codes beyond the length of 4 difgits only.</p>
+        </div>
+    </div>
+    <div class="scroll-section">
+        <div class="scroll-content">
+            <img src="photo2.jpg" alt="Bulls and Cows Solver Screenshot 2" class="scroll-image">
+            <p>Well for now we are going with 4 digits and the number of possibilities here are 0-9 = 10 numbers so -- 10!/4!*6! =210, 210 * 4! = 210 * 24 = 5040 possibilities</p>
+        </div>
+    </div>
+    <div class="scroll-section">
+        <div class="scroll-content">
+            <img src="photo3.jpg" alt="Bulls and Cows Solver Screenshot 3" class="scroll-image">
+            <p>Implements an algorithm to analyze user input and suggest the next best guess. Going with that recommended next guess will reduce the number of possibilities in the next move.</p>
+        </div>
+    </div>
+    <div class="scroll-section">
+        <div class="scroll-content">
+            <img src="photo4.jpg" alt="Bulls and Cows Solver Screenshot 4" class="scroll-image">
+            <p>Displays real-time feedback on guesses, helping users refine their approach.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <button class="back-button" onclick="window.location.href='../index.html'">Back to Portfolio</button>
+    </div>
+
+    <script>
+        const sections = document.querySelectorAll('.scroll-section .scroll-content');
+
+        function checkScroll() {
+            sections.forEach(section => {
+                const sectionTop = section.parentElement.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight * 0.75) {
+                    section.classList.add('scroll-active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkScroll);
+        checkScroll();
+    </script>
+</body>
+</html>
