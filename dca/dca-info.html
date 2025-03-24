@@ -14,27 +14,34 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            overflow-x: hidden;
         }
         .container {
             max-width: 800px;
             margin: auto;
             padding: 20px;
         }
-        .gallery {
+        .scroll-section {
+            height: 100vh;
             display: flex;
-            overflow-x: auto;
-            gap: 10px;
-            padding: 10px;
-            background: #161b22;
-            border-radius: 10px;
-            scroll-snap-type: x mandatory;
+            align-items: center;
+            justify-content: center;
+            position: relative;
         }
-        .gallery img {
+        .scroll-content {
+            position: absolute;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .scroll-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .scroll-image {
             width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 5px;
-            scroll-snap-align: center;
+            max-width: 900px;
+            border-radius: 10px;
         }
         .back-button {
             background: #238636;
@@ -55,23 +62,69 @@
     <div class="container">
         <h1>Project DCA - Dynamic Cognitive Authentication</h1>
         <p>A web-based authentication system analyzing typing patterns for security.</p>
-        <h2>Project Features</h2>
-        <ul>
-            <li>Tracks and analyzes typing behavior.</li>
-            <li>Detects inconsistencies for security authentication.</li>
-            <li>Implemented using HTML, CSS, JavaScript, Flask.</li>
-        </ul>
-        <h2>Project Gallery</h2>
-        <div class="gallery">
-            <img src="photo1.jpg" alt="Project DCA Screenshot 1">
-            <img src="photo2.jpg" alt="Project DCA Screenshot 2">
-            <img src="photo3.jpg" alt="Project DCA Screenshot 3">
-            <img src="photo4.jpg" alt="Project DCA Screenshot 4">
-            <img src="photo5.jpg" alt="Project DCA Screenshot 5">
-            <img src="photo6.jpg" alt="Project DCA Screenshot 6">
-            <img src="photo7.jpg" alt="Project DCA Screenshot 7">
-        </div>
-        <button class="back-button" onclick="window.location.href='index.html'">Back to Portfolio</button>
     </div>
+    
+    <div class="scroll-section">
+        <div class="scroll-content">
+            <img src="photo1.jpg" alt="Project DCA Screenshot 1" class="scroll-image">
+            <p>PROJECT DCA - Dynamic Cognitive Authentication PROJECT DCA is an innovative cybersecurity framework that leverages cognitive and behavioral analysis to enhance user authentication. By integrating machine learning and real-time anomaly detection, it provides adaptive protection against evolving cyber threats..</p>
+        </div>
+    </div>
+    <div class="scroll-section">
+        <div class="scroll-content">
+            <img src="photo2.jpg" alt="Project DCA Screenshot 2" class="scroll-image">
+            <p>Detects inconsistencies in user behavior for added security.</p>
+        </div>
+    </div>
+    <div class="scroll-section">
+        <div class="scroll-content">
+            <img src="photo3.jpg" alt="Project DCA Screenshot 3" class="scroll-image">
+            <p></p>
+        </div>
+    </div>
+    <div class="scroll-section">
+        <div class="scroll-content">
+            <img src="photo4.jpg" alt="Project DCA Screenshot 4" class="scroll-image">
+            <p>User-friendly interface with a real-time data visualization dashboard.</p>
+        </div>
+    </div>
+    <div class="scroll-section">
+        <div class="scroll-content">
+            <img src="photo5.jpg" alt="Project DCA Screenshot 5" class="scroll-image">
+            <p>The Certificate I recieved in the distric levle Science Fair Exhibition 2024 for Project DCA by the Nehru Yuva Kendra</p>
+        </div>
+    </div>
+    <div class="scroll-section">
+        <div class="scroll-content">
+            <img src="photo6.jpg" alt="Project DCA Screenshot 6" class="scroll-image">
+            <p>Optimized for real-time analysis and detection.</p>
+        </div>
+    </div>
+    <div class="scroll-section">
+        <div class="scroll-content">
+            <img src="photo7.jpg" alt="Project DCA Screenshot 7" class="scroll-image">
+            <p>Final authentication report with accuracy tracking.</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <button class="back-button" onclick="window.location.href='../index.html'">Back to Portfolio</button>
+    </div>
+    
+    <script>
+        const sections = document.querySelectorAll('.scroll-section .scroll-content');
+
+        function checkScroll() {
+            sections.forEach(section => {
+                const sectionTop = section.parentElement.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight * 0.75) {
+                    section.classList.add('scroll-active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkScroll);
+        checkScroll();
+    </script>
 </body>
 </html>
