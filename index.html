@@ -48,28 +48,31 @@
         .project:hover {
             transform: scale(1.05);
         }
-        .gallery {
-            display: flex;
-            overflow-x: auto;
-            gap: 10px;
-            padding: 10px;
-            background: #0d1117;
-            border-radius: 10px;
-        }
-        .gallery img {
-            width: 200px;
-            height: 120px;
-            object-fit: cover;
+        .info-button {
+            background: #238636;
+            color: white;
+            padding: 10px 15px;
+            border: none;
             border-radius: 5px;
-            transition: transform 0.3s;
+            cursor: pointer;
+            transition: background 0.3s;
         }
-        .gallery img:hover {
-            transform: scale(1.1);
+        .info-button:hover {
+            background: #2ea043;
         }
         footer {
             text-align: center;
             padding: 20px;
             background: #161b22;
+        }
+        .contact {
+            background: #161b22;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #30363d;
+        }
+        .contact p {
+            margin: 5px 0;
         }
     </style>
 </head>
@@ -98,25 +101,25 @@
             <p>Web-based authentication system analyzing typing patterns for security.</p>
             <a href="https://github.com/Sov-ereign/Project-Dynamic-Cognitive-Authentication-DCA-" target="_blank">GitHub Repo</a> |
             <a href="https://sov-ereign.github.io/Project-Dynamic-Cognitive-Authentication-DCA-/" target="_blank">Live Demo</a>
-            <div class="gallery" id="dca-gallery"></div>
+            <button class="info-button" onclick="window.location.href='dca/dca-info.html'">More Info</button>
         </div>
         <div class="project" id="mastermind">
             <h3>Mastermind</h3>
             <p>Advanced strategy-based puzzle game.</p>
             <a href="https://github.com/Sov-ereign/Mastermind" target="_blank">GitHub Repo</a>
-            <div class="gallery" id="mastermind-gallery"></div>
+            <button class="info-button" onclick="window.location.href='mastermind-info.html'">More Info</button>
         </div>
         <div class="project" id="bulls-cows">
             <h3>Bulls and Cows Solver</h3>
             <p>Interactive solver for the classic game.</p>
             <a href="https://github.com/Sov-ereign/bulls-and-cows-solver" target="_blank">GitHub Repo</a> |
             <a href="https://sov-ereign.github.io/bulls-and-cows-solver/" target="_blank">Live Demo</a>
-            <div class="gallery" id="bulls-cows-gallery"></div>
+            <button class="info-button" onclick="window.location.href='bulls-cows-info.html'">More Info</button>
         </div>
         <div class="project" id="f22">
             <h3>F-22 Raptor Model</h3>
             <p>Built from scratch for IIT KGP’s Laws of Motion event.</p>
-            <div class="gallery" id="f22-gallery"></div>
+            <button class="info-button" onclick="window.location.href='f22-info.html'">More Info</button>
         </div>
         <div class="project" id="acute-type">
             <h3>AcuteType AI Keyboard</h3>
@@ -125,13 +128,15 @@
         </div>
     </section>
     
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/somenath-gorai-b12a26326/">linkedin.com/in/somenath-gorai</a></p>
-        <p>GitHub: <a href="https://github.com/Sov-ereign">github.com/Sov-ereign</a></p>
-    </section>
-    
     <footer>
+        <div class="contact">
+            <h2>Contact</h2>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/somenath-gorai-b12a26326/">linkedin.com/in/somenath-gorai</a></p>
+            <p>GitHub: <a href="https://github.com/Sov-ereign">github.com/Sov-ereign</a></p>
+            <p>Twitter/X: <a href="https://x.com/_Sov_ereign">x.com/_Sov_ereign</a></p>
+            <p>Instagram: <a href="https://www.instagram.com/eniigmatic._.one.x/">instagram.com/eniigmatic._.one.x</a></p>
+            <p>Replit: <a href="https://replit.com/@somu8608/">replit.com/@somu8608</a></p>
+        </div>
         <p>&copy; 2025 Somenath Gorai</p>
     </footer>
 </body>
