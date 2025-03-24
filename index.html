@@ -1,16 +1,138 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somenath Gorai | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #161b22;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #58a6ff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        section {
+            padding: 50px;
+            text-align: center;
+        }
+        .project {
+            background: #161b22;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(100, 100, 100, 0.2);
+            transition: transform 0.3s;
+        }
+        .project:hover {
+            transform: scale(1.05);
+        }
+        .gallery {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px;
+            background: #0d1117;
+            border-radius: 10px;
+        }
+        .gallery img {
+            width: 200px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #161b22;
+        }
+    </style>
 </head>
-
 <body>
-  Hello world
-  <script src="script.js"></script>
+    <header>
+        <h1>Somenath Gorai</h1>
+        <p>Tech Enthusiast</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I’m a B.Tech CSE student passionate about web development, problem-solving, and AI-driven solutions. I love building interactive projects and applying logic to create innovative solutions.</p>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project" id="dca">
+            <h3>Project DCA</h3>
+            <p>Web-based authentication system analyzing typing patterns for security.</p>
+            <a href="https://github.com/Sov-ereign/Project-Dynamic-Cognitive-Authentication-DCA-" target="_blank">GitHub Repo</a> |
+            <a href="https://sov-ereign.github.io/Project-Dynamic-Cognitive-Authentication-DCA-/" target="_blank">Live Demo</a>
+            <div class="gallery" id="dca-gallery"></div>
+        </div>
+        <div class="project" id="mastermind">
+            <h3>Mastermind</h3>
+            <p>Advanced strategy-based puzzle game.</p>
+            <a href="https://github.com/Sov-ereign/Mastermind" target="_blank">GitHub Repo</a>
+            <div class="gallery" id="mastermind-gallery"></div>
+        </div>
+        <div class="project" id="bulls-cows">
+            <h3>Bulls and Cows Solver</h3>
+            <p>Interactive solver for the classic game.</p>
+            <a href="https://github.com/Sov-ereign/bulls-and-cows-solver" target="_blank">GitHub Repo</a> |
+            <a href="https://sov-ereign.github.io/bulls-and-cows-solver/" target="_blank">Live Demo</a>
+            <div class="gallery" id="bulls-cows-gallery"></div>
+        </div>
+        <div class="project" id="f22">
+            <h3>F-22 Raptor Model</h3>
+            <p>Built from scratch for IIT KGP’s Laws of Motion event.</p>
+            <div class="gallery" id="f22-gallery"></div>
+        </div>
+        <div class="project" id="acute-type">
+            <h3>AcuteType AI Keyboard</h3>
+            <p>Currently under development – an AI-powered keyboard with advanced typing assistance.</p>
+            <a href="https://github.com/Sov-ereign/AcuteType-AI-Keyboard" target="_blank">GitHub Repo</a>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/somenath-gorai-b12a26326/">linkedin.com/in/somenath-gorai</a></p>
+        <p>GitHub: <a href="https://github.com/Sov-ereign">github.com/Sov-ereign</a></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Somenath Gorai</p>
+    </footer>
 </body>
-
 </html>
