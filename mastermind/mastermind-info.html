@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastermind Bot - More Info</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .scroll-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .scroll-content {
+            position: absolute;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            text-align: center;
+        }
+        .scroll-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .scroll-image {
+            width: auto;
+            max-width: 80%;
+            max-height: 80vh;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+        .back-button {
+            background: #238636;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 20px;
+        }
+        .back-button:hover {
+            background: #2ea043;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mastermind Bot</h1>
+        <p>A bot that hosts and plays the Mastermind game using logical deduction and pattern recognition.</p>
+    </div>
+    
+    <div class="scroll-section">
+        <div class="scroll-content">
+            <img src="photo1.jpg" alt="Mastermind Bot Screenshot 1" class="scroll-image">
+            <p>The profile of the bot, Mastermind Bot is an AI-driven system that strategically plays the classic Mastermind game by analyzing past moves and optimizing future guesses.</p>
+        </div>
+    </div>
+    <div class="scroll-section">
+        <div class="scroll-content">
+            <img src="photo2.jpg" alt="Mastermind Bot Screenshot 2" class="scroll-image">
+            <p>It has many commands as you can see in the above photo, It implements an advanced pattern recognition algorithm to improve prediction accuracy.</p>
+        </div>
+    </div>
+    <div class="scroll-section">
+        <div class="scroll-content">
+            <img src="photo3.jpg" alt="Mastermind Bot Screenshot 3" class="scroll-image">
+            <p>Designed with Python and integrated with a logic-based inference system.</p>
+        </div>
+    </div>
+    <div class="scroll-section">
+        <div class="scroll-content">
+            <img src="photo4.jpg" alt="Mastermind Bot Screenshot 4" class="scroll-image">
+            <p>Users can play or host multiple games with this bot like Unravel, Bloody DOtty and Beauty Contest</p>
+        </div>
+    </div>
+    <div class="scroll-section">
+        <div class="scroll-content">
+            <img src="photo5.jpg" alt="Mastermind Bot Screenshot 5" class="scroll-image">
+            <p>Supports Multiplayer Mode where one can challenge their friend and also It Can be integrated with different difficulty levels for adaptive gameplay.</p>
+        </div>
+    </div>
+    <div class="scroll-section">
+        <div class="scroll-content">
+            <img src="photo6.jpg" alt="Mastermind Bot Screenshot 6" class="scroll-image">
+            <p>Graphical interface for real-time interaction and debugging.</p>
+        </div>
+    </div>
+    <div class="scroll-section">
+        <div class="scroll-content">
+            <img src="photo7.jpg" alt="Mastermind Bot Screenshot 7" class="scroll-image">
+            <p>Logging and Final results analysis with detailed performance metrics.</p>
+        </div>
+    </div>
+    <div class="scroll-section">
+        <div class="scroll-content">
+            <img src="photo8.jpg" alt="Mastermind Bot Screenshot 8" class="scroll-image">
+            <p>Stats function which allows the users to check their in game stats.</p>
+        </div>
+    </div>
+    <div class="scroll-section">
+        <div class="scroll-content">
+            <img src="photo9.jpg" alt="Mastermind Bot Screenshot 9" class="scroll-image">
+            
+        </div>
+    </div>
+    
+    <div class="container">
+        <button class="back-button" onclick="window.location.href='../index.html'">Back to Portfolio</button>
+    </div>
+    
+    <script>
+        const sections = document.querySelectorAll('.scroll-section .scroll-content');
+
+        function checkScroll() {
+            sections.forEach(section => {
+                const sectionTop = section.parentElement.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight * 0.75) {
+                    section.classList.add('scroll-active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkScroll);
+        checkScroll();
+    </script>
+</body>
+</html>
